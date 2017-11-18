@@ -1,13 +1,16 @@
-# README
+# cloud_bookmark
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+by [Zhu Jiayou, Huangfu Youfeng, Li Xuanshan & Han Jinpeng]
 
-Things you may want to cover:
+A SaaS app to manage your bookmarks.
+
+# Requirements
 
 * Ruby version
 
 * System dependencies
+
+# How to Use?
 
 * Configuration
 
@@ -22,3 +25,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Contact
