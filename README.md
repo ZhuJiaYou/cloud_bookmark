@@ -24,6 +24,6 @@ A SaaS app to manage your bookmarks.
 
 * Deployment instructions
 
-* ...
+* ....
 
 # Contact
