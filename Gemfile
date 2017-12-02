@@ -10,6 +10,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
+# 这个是用来计算密码哈希值的
+gem 'bcrypt', '3.1.11'
 
 gem 'rspec-rails'
 # Use Puma as the app server

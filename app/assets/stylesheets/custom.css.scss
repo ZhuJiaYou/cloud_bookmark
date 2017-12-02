@@ -26,6 +26,15 @@ textarea {
     }
 }
 
+.center1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width:50%;
+  height: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
 
 /* typography */
 h1, h2, h3, h4, h5, h6 {
@@ -117,4 +126,8 @@ footer {
 	    margin-bottom: 0px;
 	}
     }
+
+
+
+
 }
