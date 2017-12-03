@@ -6,7 +6,13 @@
 	<ul class="nav pull-right">
 	  <li><%= link_to "Home",    root_path %></li>
 	  <li><%= link_to "Help",    help_path %></li>
-	  <li><%= link_to "Sign in", signup_path %></li>
+	  <% if logged_in? %>
+          <li>
+          <%= link_to "Log out", logout_path, method: :delete %>
+          </li>
+        <% else %>
+          <li><%= link_to "Sign in", login_path %></li>
+        <% end %>
 	</ul>
       </nav>
     </div>
