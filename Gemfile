@@ -19,7 +19,7 @@ gem 'bootstrap-will_paginate', '1.0.0'
 # Use it for  get Hashcode
 gem 'bcrypt', '3.1.11'
 
-gem 'rspec-rails'
+# gem 'rspec-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
