@@ -22,6 +22,9 @@
 
 .byebug_history
 
+# 忽略上传的测试图像
+/public/uploads
+
 # Ignore other unneeded files.
 doc/
 *.swp

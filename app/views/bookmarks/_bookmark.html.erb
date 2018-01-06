@@ -1,0 +1,13 @@
+<li id="bookmark-<%= bookmark.id %>">
+  <%= link_to gravatar_for(bookmark.user, size: 50), bookmark.user %>
+  <span class="user"><%= link_to bookmark.user.name, bookmark.user %></span>
+  <span class="content"><%= bookmark.content %></span>
+  <%= image_tag bookmark.picture.url if bookmark.picture? %>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(bookmark.created_at) %> ago.
+    <% if current_user?(bookmark.user) %>
+      <%= link_to "delete", bookmark, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>

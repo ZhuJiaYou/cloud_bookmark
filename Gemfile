@@ -19,6 +19,11 @@ gem 'bootstrap-will_paginate', '1.0.0'
 # Use it for  get Hashcode
 gem 'bcrypt', '3.1.11'
 
+gem 'carrierwave',             '1.1.0'
+gem 'mini_magick',             '4.7.0'
+gem 'fog-aws',                 '2.0.0'
+gem 'nokogiri',                '1.8.1'
+
 # gem 'rspec-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
