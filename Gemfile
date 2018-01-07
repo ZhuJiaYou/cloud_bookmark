@@ -23,7 +23,7 @@ gem 'carrierwave',             '1.2.1'
 gem 'mini_magick',             '4.7.0'
 gem 'fog-aws',                 '2.0.0'
 gem 'fog',                     '1.41'
-gem 'figaro'
+#gem 'figaro'
 gem 'nokogiri',                '1.8.1'
 
 # gem 'rspec-rails'
