@@ -33,3 +33,5 @@ doc/
 .DS_Store
 .idea
 \#*
+# Ignore application configuration
+/config/application.yml
