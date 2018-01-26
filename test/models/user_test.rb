@@ -70,7 +70,7 @@ class UserTest < ActiveSupport::TestCase
   
   test "associated bookmarks should be destroyed" do
     @user.save
-    @user.bookmarks.create!(content: "Lorem ipsum")
+    @user.bookmarks.create!(name: "QQ", url: "http://www.qq.com")
     assert_difference 'Bookmark.count', -1 do
       @user.destroy
     end

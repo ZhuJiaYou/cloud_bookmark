@@ -13,9 +13,7 @@ class ActiveSupport::TestCase
   # 登入指定的用户
   def log_in_as(user)
     session[:user_id] = user.id
-  en
-end
-
+  end
 
 # 登入指定的用户
   def log_in_as(user, password: 'password', remember_me: '1')

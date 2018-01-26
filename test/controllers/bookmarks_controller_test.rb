@@ -7,7 +7,7 @@ class BookmarksControllerTest < ActionDispatch::IntegrationTest
 
   test "should redirect create when not logged in" do
     assert_no_difference 'Bookmark.count' do
-      post bookmarks_path, params: { bookmark: { content: "Lorem ipsum" } }
+      post bookmarks_path, params: { bookmark: { name: "Lorem", url: "https://bookmarkincloud.herokuapp.com/" } }
     end
     assert_redirected_to login_url
   end

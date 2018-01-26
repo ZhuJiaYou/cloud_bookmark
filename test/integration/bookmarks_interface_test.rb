@@ -12,17 +12,19 @@ class BookmarksInterfaceTest < ActionDispatch::IntegrationTest
     assert_select 'div.pagination'
     # 无效提交
     assert_no_difference 'Bookmark.count' do
-      post bookmarks_path, params: { bookmark: { content: "" } }
+      post bookmarks_path, params: { bookmark: { name: "", url: "" } }
     end
     assert_select 'div#error_explanation'
     # 有效提交
-    content = "This bookmark really ties the room together"
+    name = "QQ"
+    url = "http://www.qq.com"
     assert_difference 'Bookmark.count', 1 do
-      post bookmarks_path, params: { bookmark: { content: content } }
+      post bookmarks_path, params: { bookmark: { name: name, url: url } }
     end
     assert_redirected_to root_url
     follow_redirect!
-    assert_match content, response.body
+    assert_match name, response.body
+    assert_match url, response.body
     # 删除一个书签
     assert_select 'a', text: 'delete'
     first_bookmark = @user.bookmarks.paginate(page: 1).first

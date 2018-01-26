@@ -2,7 +2,7 @@ class BookmarksController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
 
- def create
+  def create
     @bookmark = current_user.bookmarks.build(bookmark_params)
     if @bookmark.save
       flash[:success] = "Bookmark created!"
@@ -22,7 +22,7 @@ class BookmarksController < ApplicationController
   private
 
     def bookmark_params
-      params.require(:bookmark).permit(:content, :picture)
+      params.require(:bookmark).permit(:name, :url, :picture)
     end
     
     def correct_user
