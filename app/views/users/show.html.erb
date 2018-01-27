@@ -1,20 +1,13 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-  <div class="col-md-8">
+  
+  <div class="col-md-12">
     <% if @user.bookmarks.any? %>
       <h3>Bookmarks (<%= @user.bookmarks.count %>)</h3>
       <ol class="bookmarks">
         <%= render @bookmarks %>
       </ol>
-      <%= will_paginate @bookmarks %>
+      <%= will_paginate @bookmarks,{:previous_label => " 上一页 ", :next_label => " 下一页 "} %>
     <% end %>
   </div>
 </div>

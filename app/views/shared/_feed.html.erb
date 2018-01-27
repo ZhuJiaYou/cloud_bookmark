@@ -2,5 +2,5 @@
   <ol class="bookmarks">
     <%= render @feed_items %>
   </ol>
-  <%= will_paginate @feed_items %>
+  <%= will_paginate @feed_items ,{:previous_label => " 上一页 ", :next_label => " 下一页 "} %>
 <% end %>
