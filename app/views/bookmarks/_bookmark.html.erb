@@ -1,13 +1,22 @@
 <li id="bookmark-<%= bookmark.id %>">
-  <span class="content">
-    <%= image_tag bookmark.picture.url if bookmark.picture? %>
+  
+  <span class="name">
     <%= link_to bookmark.name, bookmark.url %>
   </span>
+  
+  <% if bookmark.picture? %>
+    <% img = bookmark.picture.url %>
+  <% else %> 
+    <% img = "CloudBookmark.png" %>
+  <% end %>  
+  <%= link_to image_tag(img, alt: "BookmarkPic"), bookmark.url %>
+
   <span class="timestamp">
-    Added <%= time_ago_in_words(bookmark.created_at) %> ago.
+    <%= time_ago_in_words(bookmark.created_at) %>
     <% if current_user?(bookmark.user) %>
-      <%= link_to "delete", bookmark, method: :delete,
+      <%= link_to "DEL", bookmark, method: :delete,
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>
+  
 </li>

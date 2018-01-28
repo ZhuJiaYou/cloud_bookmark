@@ -102,12 +102,12 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
+  font-size: 1.5em;
+  color: green;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  font-style: italic;
   &:hover {
     color: white;
     text-decoration: none;
@@ -215,11 +215,11 @@ input {
   }
   .user {
     margin-top: 5em;
-    padding-top: 0;
+    border-top: 1px;
   }
-  .content {
+  .name {
     display: block;
-    margin-left: 60px;
+    margin-left: 0px;
     img {
       display: block;
       padding: 5px 0;
@@ -228,13 +228,9 @@ input {
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-left: 60px;
+    margin-left: 0px;
   }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-  }
+
 }
 
 aside {
@@ -249,4 +245,13 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+/* horizontal list */
+
+.hol {
+  li {
+      float: left;
+      // margin-left: 15px;
+    }
 }

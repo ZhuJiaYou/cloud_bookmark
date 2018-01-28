@@ -1,6 +1,25 @@
 <% if @feed_items.any? %>
-  <ol class="bookmarks">
-    <%= render @feed_items %>
-  </ol>
-  <%= will_paginate @feed_items %>
+  <% c = @feed_items.count %>
+  
+  <% i = 0 %>
+  <% while i < c %>
+    <ol class="bookmarks">
+      
+      <% if @feed_items[i] != nil %>
+        <div class="col-md-4">
+          <li class="hol"><%= render @feed_items[i] %></li>
+        </div>
+      <% end %>
+
+    </ol>
+    
+    <% i += 1 %>
+  
+  <% end %>
+
+  <div class="col-md-12">
+    <%= will_paginate @feed_items %>
+  </div>
+  
 <% end %>
+
