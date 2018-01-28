@@ -25,8 +25,8 @@ class BookmarkTest < ActiveSupport::TestCase
     assert_not @bookmark.valid?
   end
 
-  test "name should be at most 100 characters" do
-    @bookmark.name = "a" * 101
+  test "name should be at most 25 characters" do
+    @bookmark.name = "a" * 26
     assert_not @bookmark.valid?
   end
   

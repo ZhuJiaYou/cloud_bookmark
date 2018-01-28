@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @bookmarks = @user.bookmarks.paginate(page: params[:page], :per_page => 12)
+    @bookmarks = @user.bookmarks.paginate(page: params[:page], :per_page => 16)
   end
 
   def new

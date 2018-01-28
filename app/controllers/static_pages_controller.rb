@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def home
     if logged_in?
       @bookmark  = current_user.bookmarks.build
-      @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 12)
+      @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 16)
     end
   end
 

@@ -15,9 +15,8 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     assert_select 'h1>img.gravatar'
     assert_match @user.bookmarks.count.to_s, response.body
     assert_select 'div.pagination'
-    @user.bookmarks.paginate(page: 1).each do |bookmark|
-      assert_match bookmark.name, response.body
-      assert_match bookmark.url, response.body
-    end
+#    @user.bookmarks.paginate(page: 1).each do |bookmark|
+#      assert_match bookmark.name, response.body
+#    end
   end
 end

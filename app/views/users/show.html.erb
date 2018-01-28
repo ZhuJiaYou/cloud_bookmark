@@ -15,13 +15,13 @@
       <h3>Bookmarks (<%= c %>)</h3>
       
       <% i = 0 %>
-      <% while i < c %>
+      <% while i < 16 && i < c %>
       
         <ol class="bookmarks">
           
           <% if @bookmarks[i] != nil %>
-            <div class="col-md-4">
-              <li class="hol"><%= render @bookmarks[i] %></li>
+            <div class="col-lg-3 col-md-3 col-sm-9 col-xs-9">
+              <li><%= render @bookmarks[i] %></li>
             </div>
           <% end %>
           
