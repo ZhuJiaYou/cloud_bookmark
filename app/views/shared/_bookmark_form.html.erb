@@ -2,7 +2,7 @@
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <%= f.text_field :name, placeholder: "Website Name" %>
-    <%= f.url_field :url, placeholder: "URL" %>
+    <%= f.url_field :url, placeholder: "URL (Must begin with http:// or https://)" %>
   </div>
   <%= f.submit "ADD", class: "btn btn-primary" %>
   <span class="picture">
